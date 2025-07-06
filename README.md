@@ -1,4 +1,5 @@
 Introdução
+
 Este repositório contém o MVP para disciplina de Análise de Dados e Boas Práticas (2025.1) feito pela aluna Nathalia Vasconcelos. Além do notebook realizado no Google Colab, 
 pode-se encontrar o dataset usado como base para a análise realizada. Nesta secção README, pode-se ler um pequeno resumo dos tópicos mais relevantes do trabalho realizado.
 
