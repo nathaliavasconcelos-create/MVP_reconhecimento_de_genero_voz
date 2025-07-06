@@ -102,51 +102,7 @@ Dimensões de X_test: (950, 13)
 Dimensões de y_train: (2216,)
 Dimensões de y_test: (950,)
 
-Em seguida, realizou-se o processo de padronização, obtendo os seguintes resultados:
-]
-0 s
-#Converter os arrays de volta para DataFrames (opcional, mas ajuda a visualizar)
-X_train_scaled_df = pd.DataFrame(X_train_scaled, columns=X_train.columns)
-X_test_scaled_df = pd.DataFrame(X_test_scaled, columns=X_test.columns)
-
-#Adicionar a variável de gênero
-X_train_scaled_df['perceived_gender'] = y_train.reset_index(drop=True)
-X_test_scaled_df['perceived_gender'] = y_test.reset_index(drop=True)
-
-#Estatísticas por gênero (média e desvio padrão)
-print("Estatísticas por gênero no conjunto padroniz
-Estatísticas por gênero no conjunto padronizado (X_train_scaled):
-perceived_gender    female      male
-meanfreq mean     0.330373 -0.330373
-         std      1.011942  0.871372
-sd       mean    -0.478007  0.478007
-         std      1.101330  0.575747
-Q75      mean    -0.076699  0.076699
-         std      0.994737  1.000264
-IQR      mean    -0.621573  0.621573
-         std      0.998500  0.481040
-skew     mean    -0.044698  0.044698
-         std      0.695530  1.230466
-sp.ent   mean    -0.483345  0.483345
-         std      1.048574  0.659266
-sfm      mean    -0.356050  0.356050
-         std      1.013008  0.849617
-mode     mean     0.159143 -0.159143
-         std      0.878337  1.086109
-meanfun  mean     0.833792 -0.833792
-         std      0.568871  0.535272
-minfun   mean     0.146444 -0.146444
-         std      1.159908  0.783256
-meandom  mean     0.170537 -0.170537
-         std      1.089399  0.869941
-maxdom   mean     0.171209 -0.171209
-         std      1.091341  0.867239
-dfrange  mean     0.167795 -0.167795
-         std      1.092131  0.867580
-         
-Após a aplicação do StandardScaler, obtivemos valores de desvio padrão próximos a 1 e médias próximas a 0, em todo o conjunto de dados. No entanto, olhando 
-para as estatísticas dentro de cada grupo separado por gênero estes valores são diferentes. Na verdade, ao fazer essa análise, busca-se compreender qual seria 
-a variabilidade dos valores padronizados dentro de cada subgrupo.
+Em seguida, realizou-se o processo de padronização. Após a aplicação do StandardScaler, obtivemos valores de desvio padrão próximos a 1 e médias próximas a 0, em todo o conjunto de dados. No entanto, olhando para as estatísticas dentro de cada grupo separado por gênero estes valores são diferentes. Na verdade, ao fazer essa análise, busca-se compreender qual seria a variabilidade dos valores padronizados dentro de cada subgrupo.
 Com base nos valores obtidos, pode-se também fazer algumas análises. Observa-se que para todas as variáveis, as classes masculino e feminino têm valores 
 simetricamente opostos. Na prática, isto ocorre por conta do equilíbrio do dataset. Seria um problema apenas se fosse verificado data leakage, o que não ocorreu.
 
